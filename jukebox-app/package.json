@@ -1,0 +1,39 @@
+{
+  "scripts": {
+    "dev": "tsc-watch --onSuccess \"node ./dist/main.js\"",
+    "prod": "node ./dist/main.js",
+    "build": "tsc",
+    "test": "ava --watch"
+  },
+  "ava": {
+    "typescript": {
+      "rewritePaths": {
+        "src/": "dist/"
+      },
+      "compile": false
+    }
+  },
+  "dependencies": {
+    "@types/cors": "^2.8.13",
+    "axios": "^1.3.2",
+    "body-parser": "^1.20.1",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "dotenv-expand": "^10.0.0",
+    "express": "^4.18.2",
+    "querystring": "^0.2.1",
+    "socket.io": "^4.7.1"
+  },
+  "devDependencies": {
+    "@ava/typescript": "^4.1.0",
+    "@types/cookie-parser": "^1.4.3",
+    "@types/express": "^4.17.16",
+    "@types/node": "^18.11.18",
+    "@types/supertest": "^2.0.12",
+    "ava": "^5.3.1",
+    "supertest": "^6.3.3",
+    "tsc-watch": "^6.0.0",
+    "typescript": "^5.2.2"
+  }
+}

@@ -1,0 +1,16 @@
+# syntax=docker/dockerfile:1
+   
+FROM node:18-alpine
+WORKDIR /app
+
+# install & build backend app
+RUN mkdir jukebox-app
+COPY ../jukebox-app/package.json ./jukebox-app
+WORKDIR /app/jukebox-app
+RUN npm install
+COPY ../jukebox-app ./
+RUN npm run build
+
+COPY ../jukebox-front/dist ./dist/public
+
+CMD ["npm", "run", "prod"]

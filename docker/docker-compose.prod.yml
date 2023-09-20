@@ -1,0 +1,15 @@
+# docker compose to be used in prod environment
+
+services:
+  jukebox:
+      image: jukebox.prod
+      ports: 
+        - 3000:3000
+      environment:
+        APP_PORT: ${APP_PORT}
+        STATE_KEY: ${STATE_KEY}
+        CLIENT_ID: ${CLIENT_ID}
+        CLIENT_SECRET: ${CLIENT_SECRET}
+        REDIRECT_URI: ${REDIRECT_URI}
+        CLIENT_APP_URI: ${CLIENT_APP_URI}
+        PROD: ${PROD}
