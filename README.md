@@ -26,6 +26,10 @@ You will need Docker installed on the host machine to run the app in production 
 * Run the command `./jukebox.sh run dev back` at the root of the repository to run the backend in developement mode
 * Run the command `./jukebox.sh run dev front` at the root of the repository to run the frontend in developement mode
 
+### Notes
+Before playing a music on the application make sure you have started a Spotify client.
+You should be logged in on this client with an account registered in your Spotify for Developers app.
+
 ## App overview
 ### Authorize the app
 While connected to your host network, navigate to `http://<host-ip>:<app-port>` with a smartphone or any device. 
